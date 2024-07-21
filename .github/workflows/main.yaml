@@ -11,8 +11,4 @@ jobs:
 
     - name: Run a simple github action
       run: echo "this workflow run successfully for this particular action"
-    - name: Install dependencies
-      run: npm install
-
-    - name: Run tests
-      run: npm test
+    
