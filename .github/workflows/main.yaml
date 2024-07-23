@@ -1,4 +1,4 @@
-name: first workflow
+name:first workflow
 
 on:
     push:
@@ -11,14 +11,14 @@ jobs:
 
     steps:
       -name:checkoutcode
-      uses: actions/checkout@v2
+      uses:actions/checkout@v2
       -name:install dependencies
-      run: npm install
-      -name: build project
-      run: npm run build
-      -name: test project
-      run: npm run test
-      -name: deploy project
-      run: npm run deploy
+      run:npm run install
+      -name:Build project
+      run:npm run build
+      -name:Test project
+      run:npm run test
+      -name:Deploy project
+      run:npm run deploy
       
     
