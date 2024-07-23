@@ -1,14 +1,24 @@
 name: first workflow
 
-on: push
+on:
+    push:
+        branches:
+           -main
 
 jobs:
- build:
+ build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      uses: actions/checkout@v3
-
-    - name: Run a simple github action
-      run: echo "this workflow run successfully for this particular action"
+      -name:checkoutcode
+      uses: actions/checkout@v2.43.0
+      -name:install dependencies
+      run: npm install
+      -name: build project
+      run: npm run build
+      -name: test project
+      run: npm run test
+      -name: deploy project
+      run: npm run deploy
+      
     
